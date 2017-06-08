@@ -1,0 +1,29 @@
+@model IEnumerable<AuthenticationDemo.Models.ViewClaim>
+
+@{
+    ViewBag.Title = "Client identity";
+}
+
+<h2>Client identity</h2>
+
+<div style="padding-top:10px; padding-bottom:20px">
+    
+    Principal Type: <strong>@ViewBag.PrincipalType</strong>
+    <br />
+    Identity Type: <strong>@ViewBag.IdentityType</strong>
+    
+</div>
+
+<table>
+    @foreach (var claim in Model)
+    {
+        <tr>
+            <td>
+                <strong>@claim.Type</strong>
+            </td>
+            <td>
+                <span>@claim.Value</span>
+            </td>
+        </tr>
+    }
+</table>
