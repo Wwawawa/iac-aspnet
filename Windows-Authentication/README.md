@@ -18,7 +18,7 @@
     </security>
   </system.webServer>
 ```
-* ...and ASP.NET settings
+* ...and ASP.NET settings(you can configure that through ***project property***)
 ```xml
 <authentication mode="Windows" />
 ```
