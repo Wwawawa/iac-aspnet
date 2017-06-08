@@ -1,5 +1,5 @@
 # iac-aspnet
-#### pipeline
+#### 1-pipeline
 this pipeline only show the step involved authentication, not all steps of aspnet 
 * BeginRequest: Client make a request
 * AuthenticateRequest: 
@@ -11,3 +11,4 @@ this pipeline only show the step involved authentication, not all steps of aspne
 * AuthorizeRequest: determine if user is allowed to access resource
 * ExecuteHandler: resource rendering
 * EndRequest: post processing(error response/ redirect)
+#### 2-[Windows Identity Foundation](https://docs.microsoft.com/en-us/dotnet/framework/security/index)
