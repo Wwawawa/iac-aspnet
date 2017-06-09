@@ -40,4 +40,4 @@
 ```
 #### 2-[OWIN](http://owin.org/)
 * MVC Individual Account Authenticaiton default deployment using owin UseCookieAuthentication
-#### This project build based on windows authentication project
+#### 3-This project build based on windows authentication project using old authentication logic
