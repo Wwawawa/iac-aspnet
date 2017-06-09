@@ -19,7 +19,8 @@
   * simple cookie as authentication token
   * ...but also limited
 
-#### Configuration
+### Deployment methods
+#### 1-Configuration
 * Allow anonymous connections
 ```xml
 <system.webServer>
@@ -37,3 +38,5 @@
   timeout="2880" />
 </authentication>
 ```
+#### 2-[OWIN](http://owin.org/)
+* MVC Individual Account Authenticaiton default deployment using owin UseCookieAuthentication
