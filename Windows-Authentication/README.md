@@ -1,3 +1,10 @@
+#### The ASP.NET Pipeline - what to do in the step
+* BeginRequest - Request
+* AuthenticateRequest - Copy IIS generated WindowsIdentity - Set Principal
+* PostAuthenticateRequest
+* AuthorizeRequest
+* ExecuteHandler - Resource Rendering
+* EndRequest - Response
 #### Benefits & Scenarios
 * Typical choice for intranet applications
 * Heavy lifting is done by the infrastructure
