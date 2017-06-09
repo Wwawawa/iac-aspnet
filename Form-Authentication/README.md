@@ -20,7 +20,7 @@
   * ...but also limited
 
 ### Deployment methods
-#### 1-Configuration
+#### 1-Configuration(old)
 * Allow anonymous connections
 ```xml
 <system.webServer>
