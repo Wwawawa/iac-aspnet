@@ -41,3 +41,31 @@
 #### 2-[OWIN](http://owin.org/)
 * MVC Individual Account Authenticaiton default deployment using owin UseCookieAuthentication
 #### 3-This project build based on windows authentication project using old authentication logic
+#### Membership and RoleManager
+* Membership is a built-in abstraction for data storage
+* RoleManager can add role claims
+* This demo:
+  * Add customer membership class
+  * Add customer roleManager class
+  * Call Membership.ValidateUser function to valudate user in the AccountController
+  * Add below code into web.config:
+  ```xml
+      <!--membershi config-->
+    <membership defaultProvider="Demo">
+      <providers>
+        <add name="Demo"
+             type="WebApplication1.DemoMembershipProvider" />
+      </providers>
+    </membership>
+    <!--membershi config-->
+    <!--roleManager config-->
+    <roleManager enabled="true"
+                 defaultProvider="Demo" 
+                 cacheRolesInCookie="true"><!--store roles into cookie-->
+      <providers>
+        <add name="Demo"
+             type="WebApplication1.DemoRoleProvider" />
+      </providers>
+    </roleManager>
+    <!--roleManager config-->
+  ```
