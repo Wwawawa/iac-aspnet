@@ -35,3 +35,13 @@
     </modules>
 ```
 * Add 'Application_PostAuthenticateRequest' function into global.asax.cs to make Claims Transformation manually in PostAuthenticateRequest
+* Change the show user name on the page logic in the _Layout.cshtml
+```cshtml
+    @if (User.Identity.IsAuthenticated)
+    {
+        <text>Hello, </text>
+        <span class="username">
+            @System.Security.Claims.ClaimsPrincipal.Current.FindFirst(System.IdentityModel.Claims.ClaimTypes.GivenName).Value
+        </span>
+    }
+```
