@@ -29,3 +29,7 @@
 ```xml
 <authentication mode="Windows" />
 ```
+#### Get groups information from commend line:
+```sh
+  whoami /groups /fo list
+```
