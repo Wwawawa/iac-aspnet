@@ -12,3 +12,10 @@ this pipeline only show the step involved authentication, not all steps of aspne
 * ExecuteHandler: resource rendering
 * EndRequest: post processing(error response/ redirect)
 #### 2-[Windows Identity Foundation](https://docs.microsoft.com/en-us/dotnet/framework/security/index)
+
+#### Project sort
+* [1-Windows-Authentication](https://github.com/Wwawawa/iac-aspnet/tree/master/Windows-Authentication)
+* [2-Form-Authentication](https://github.com/Wwawawa/iac-aspnet/tree/master/Form-Authentication)
+* [3-ClaimsTransformation](https://github.com/Wwawawa/iac-aspnet/tree/master/ClaimsTransformation)
+* [4-Authentication-Sessions](https://github.com/Wwawawa/iac-aspnet/tree/master/Authentication-Sessions)
+
