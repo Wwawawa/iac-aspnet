@@ -30,8 +30,10 @@ namespace AuthenticationDemo.Controllers
             if (ModelState.IsValid)
             {
                 // authenticate user
-                var success = ValidateUser(model.UserName, model.Password);
-                //var success = Membership.ValidateUser(model.UserName, model.Password);
+                //var success = ValidateUser(model.UserName, model.Password);
+                
+                // using roleManager and membership block authentication
+                var success = Membership.ValidateUser(model.UserName, model.Password);
 
                 if (success)
                 {
