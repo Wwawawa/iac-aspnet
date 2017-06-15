@@ -26,3 +26,12 @@
     * using an HTTP module
         * Thinktecture.IdentityModel has one
         * WS-Federation plumbing does that automatically
+#### Demo
+* Add a custom 'ClaimsTransformer' function override the Authenticate
+* Add remove module for roleManager into Web.config, because we only use it for roles store
+```sh
+    <modules runAllManagedModulesForAllRequests="true">
+      <remove name="RoleManager" />
+    </modules>
+```
+* Add 'Application_PostAuthenticateRequest' function into global.asax.cs to make Claims Transformation manually in PostAuthenticateRequest
