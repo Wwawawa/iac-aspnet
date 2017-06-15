@@ -26,7 +26,7 @@
     * using an HTTP module
         * Thinktecture.IdentityModel has one
         * WS-Federation plumbing does that automatically
-#### Demo
+#### Demo(base on form authenticaiton project)
 * Add a custom 'ClaimsTransformer' function override the Authenticate
 * Add remove module for roleManager into Web.config, because we only use it for roles store
 ```sh
