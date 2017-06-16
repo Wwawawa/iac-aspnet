@@ -34,5 +34,17 @@ namespace WebApplication1
         //    Thread.CurrentPrincipal = principal;
         //    HttpContext.Current.User = principal;
         //}
+        
+        // sliding expiration
+
+        //void SessionAuthenticationModule_SessionSecurityTokenReceived(object sender, SessionSecurityTokenReceivedEventArgs e)
+        //{ 
+        //    // use e.SessionToken to inspect session details 
+        //    if (extendSession)
+        //    {
+        //        var sam = sender as SessionAuthenticationModule;
+        //        e.SessionToken = sam.CreateSessionSecurityToken(…);
+        //        e.ReissueCookie = true; } 
+        //}
     }
 }
