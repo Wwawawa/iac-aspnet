@@ -20,5 +20,5 @@
       <deny users="?" />
     </authorization>
 ```
-#### 2- change homeController and add customerController
+#### 2- change homeController and add customerController(call customerController using url [http://localhost:1096/api/customers/], this is actually a router)
 #### 3- add custom Authorization class 'ClaimsBasedAuthorization.AuthorizationManager'
