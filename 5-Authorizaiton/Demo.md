@@ -1,4 +1,4 @@
-1- add below code into config
+#### 1- add below code into config
 ```xml
 <configSections>
     <section name="system.identityModel"
@@ -20,5 +20,5 @@
       <deny users="?" />
     </authorization>
 ```
-2- change homeController and add customerController
-3- add custom Authorization class 'ClaimsBasedAuthorization.AuthorizationManager'
+#### 2- change homeController and add customerController
+#### 3- add custom Authorization class 'ClaimsBasedAuthorization.AuthorizationManager'
