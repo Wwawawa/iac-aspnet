@@ -27,6 +27,10 @@ namespace Web.Security
         private void EstablishSession(ClaimsPrincipal principal)
         {
             var sessionToken = new SessionSecurityToken(principal, TimeSpan.FromHours(8));
+            
+            // cache on server
+            //sessionToken.IsReferenceMode = true;
+            
             FederatedAuthentication.SessionAuthenticationModule.WriteSessionTokenToCookie(sessionToken);
         }
         private ClaimsPrincipal CreatePrincipal(string userName)
