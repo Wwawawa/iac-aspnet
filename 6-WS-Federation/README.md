@@ -27,7 +27,7 @@
   request token GET/wsfed : client--using "using wsfed?wa=wsignin1.0&wtrealm=address_of_rp" -->STS--return below form-->client
   request resource from relying party again Post /: client--with upon form-->relying party(200)
   ```
-sts return form anthentication info:
+sts return anthentication info format form:
   ```xml
   <form method="POST" action="address_of_rp">
     <input name="wresult" value=""
