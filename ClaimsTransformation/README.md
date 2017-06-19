@@ -26,6 +26,15 @@
     * using an HTTP module
         * Thinktecture.IdentityModel has one
         * WS-Federation plumbing does that automatically
+    * Other invoke ways(maybe upon second points example): we can add below config node in the web.config, and invoke that in code, for this refer to [Authentication-Sessions project](https://github.com/Wwawawa/iac-aspnet/tree/master/Authentication-Sessions) and [Authorizaiton project](https://github.com/Wwawawa/iac-aspnet/tree/master/5-Authorizaiton) .etc
+    ```sh
+    <system.identityModel>
+    <identityConfiguration>
+      <!--call custom Authorization class 'ClaimsBasedAuthorization.AuthorizationManager'-->
+      <claimsAuthorizationManager type="ClaimsBasedAuthorization.AuthorizationManager, ClaimsBasedAuthorization" />
+    </identityConfiguration>
+    </system.identityModel>
+    ```
 #### Demo(base on form authenticaiton project)
 * Add a custom 'ClaimsTransformer' function override the Authenticate
 * Add remove module for roleManager into Web.config, because we only use it for roles store
