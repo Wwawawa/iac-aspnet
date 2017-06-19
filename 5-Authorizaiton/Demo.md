@@ -1,3 +1,4 @@
+## Base on Form-authentication project, this demo using thinktecture.identityModel as authorization model
 #### 1- add below code into config
 ```xml
 <configSections>
@@ -15,10 +16,18 @@
   </system.identityModel>
 ```
 ```xml
-    <authentication mode="Windows" />
+    <authentication mode="Forms">
+      <forms loginUrl="~/account/login" />
+    </authentication>
     <authorization>
       <deny users="?" />
     </authorization>
 ```
-#### 2- change homeController and add customerController(call customerController using url [http://localhost:1096/api/customers/], this is actually a router)
+#### 2- change homeController and add customerController(call customerController using url [http://localhost:1096/api/customers/], this is webApi, need to add webApi package)
 #### 3- add custom Authorization class 'ClaimsBasedAuthorization.AuthorizationManager'
+#### 4- add webAPi config in global.asax
+#### 5- add webApiConfig.cs into the folder of app_Start
+#### 6 a new filter into 'FilterConfig' from the folder of app_Start
+```cs
+  filters.Add(new ClaimsAuthorizeAttribute());
+```
