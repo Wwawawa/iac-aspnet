@@ -17,6 +17,7 @@ namespace ClaimsBasedAuthorization
             );
 
             // add global authorization filter
+            // invoke the ClaimsAuthenticationManager and call the customized method at the node of claimsAuthorizationManager configured in the web.config
             config.Filters.Add(new ClaimsAuthorizeAttribute());
         }
     }
