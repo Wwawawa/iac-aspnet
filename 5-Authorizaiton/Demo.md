@@ -1,4 +1,4 @@
-## Base on Form-authentication project, this demo using thinktecture.identityModel as authorization model
+### Base on Form-authentication project, this demo is claims-based using thinktecture.identityModel as authorization model
 #### 1- add below code into config
 ```xml
 <configSections>
