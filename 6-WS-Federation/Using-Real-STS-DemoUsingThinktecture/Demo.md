@@ -56,7 +56,8 @@
     <federationConfiguration>
       <cookieHandler requireSsl="false" />
       <wsFederation passiveRedirectEnabled="true"
-                    issuer="https://localhost/idsrv/issue/wsfed"
+		<!--issuer is WS-Federation from Application Integration of home page-->
+                    issuer="https://localhost/idsrv/issue/wsfed"
                     realm="http://localhost:15701/"
                     requireHttps="false" />
     </federationConfiguration>
