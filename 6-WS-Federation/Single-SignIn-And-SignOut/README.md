@@ -4,6 +4,7 @@
   * identity provider is shared across multiple applications
   * during that logon session, user can request token without re-authentication
 #### 2- Single sign-out
+* sign out from relying parties, sign out from the token service
 * Security Token Service: call endpoint like 
 ```th
 '/wsfed?wa=wsignout1.0'
