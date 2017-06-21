@@ -8,8 +8,8 @@
 ```th
 '/wsfed?wa=wsignout1.0'
 ```
+* below show the example of all the relying parties sign out clean up query string
 ```html
-not know what is it?????
 <p> 
     <img src = "https://rp1/?wa=wsignoutcleanup1.0" /> 
 </p> 
