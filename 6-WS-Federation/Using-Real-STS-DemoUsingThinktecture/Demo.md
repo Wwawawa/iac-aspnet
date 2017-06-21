@@ -38,6 +38,7 @@
 ```xml
 	<system.identityModel>
     <identityConfiguration>
+    <!--audienceUris is your app which need to be authenticated-->
       <audienceUris>
         <add value="http://localhost:15701/" />
       </audienceUris>
@@ -45,6 +46,7 @@
       <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
         <trustedIssuers>
 	<!--thumbprint value which can be got from 'Signing Thumbprint' in the key configuration-->
+	<!--name is what you want to name, which will be as a properties in you identity info-->
           <add thumbprint="D8E0BD015980C24F96FD0EBAD88EA61BEFA7DF82"
                name="IdSrv" />
         </trustedIssuers>
@@ -56,6 +58,7 @@
     <federationConfiguration>
       <cookieHandler requireSsl="false" />
       <!--issuer is WS-Federation from Application Integration of home page-->
+      <!--realm is your app which need to be authenticated-->
       <wsFederation passiveRedirectEnabled="true"		
                     issuer="https://localhost/idsrv/issue/wsfed"
                     realm="http://localhost:15701/"
