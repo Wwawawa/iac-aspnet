@@ -44,6 +44,7 @@
 
       <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
         <trustedIssuers>
+	<!--thumbprint value which can be got from 'Signing Thumbprint' in the key configuration-->
           <add thumbprint="D8E0BD015980C24F96FD0EBAD88EA61BEFA7DF82"
                name="IdSrv" />
         </trustedIssuers>
