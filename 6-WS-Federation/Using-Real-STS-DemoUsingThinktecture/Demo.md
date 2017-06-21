@@ -55,8 +55,8 @@
   <system.identityModel.services>
     <federationConfiguration>
       <cookieHandler requireSsl="false" />
-      <wsFederation passiveRedirectEnabled="true"
-		<!--issuer is WS-Federation from Application Integration of home page-->
+      <!--issuer is WS-Federation from Application Integration of home page-->
+      <wsFederation passiveRedirectEnabled="true"		
                     issuer="https://localhost/idsrv/issue/wsfed"
                     realm="http://localhost:15701/"
                     requireHttps="false" />
