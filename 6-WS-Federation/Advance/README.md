@@ -49,7 +49,7 @@
   ```
 #### 5- Signing Out(Demo of Logout using [AccountController](https://github.com/Wwawawa/iac-aspnet/blob/master/6-WS-Federation/Advance/Controllers/AccountController.cs) and [View](https://github.com/Wwawawa/iac-aspnet/blob/master/6-WS-Federation/Advance/Views/Shared/_Layout.cshtml))
 * Need to clear the authentication session cookie
-	* does not sign-out the user at the token service (see next module)
+	* does not sign-out the user at the token service (see next module), so when go back to the page you logout, you can still access to this page with the sign-in 
 	```cs
 	FederatedAuthentication.WSFederationAuthenticationModule.SignOut();
 	```
