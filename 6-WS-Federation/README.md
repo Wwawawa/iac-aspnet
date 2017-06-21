@@ -1,3 +1,4 @@
+### Reference [IdentityServer2 Document](https://github.com/IdentityServer/IdentityServer2/wiki)
 #### 1- External authentication is a separate authenticaition logic which can reuse for muiltple application.
 #### 2- workflow
 ```th
