@@ -1,3 +1,4 @@
+### Base on [Using-Real-STS-DemoUsingThinktecture](https://github.com/Wwawawa/iac-aspnet/tree/master/6-WS-Federation/Using-Real-STS-DemoUsingThinktecture)
 #### 1- Dynamic Configuration([Demo](https://github.com/Wwawawa/iac-aspnet/blob/master/6-WS-Federation/Advance/Global.asax.cs))
 * Sometimes you need to configure your application dynamically at startup
 	* register configuration event handler in Application_Start
