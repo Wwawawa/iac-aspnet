@@ -1,3 +1,11 @@
+#### Sort
+* 1-[Using-Real-STS-DemoUsingThinktecture](https://github.com/Wwawawa/iac-aspnet/tree/master/6-WS-Federation/Using-Real-STS-DemoUsingThinktecture)
+* 2-[Advance-Dynamic-Other](https://github.com/Wwawawa/iac-aspnet/tree/master/6-WS-Federation/Advance)
+* 3-[Single-SignIn-And-SignOut](https://github.com/Wwawawa/iac-aspnet/tree/master/6-WS-Federation/Single-SignIn-And-SignOut)
+* 4-[Federating with multiple Identity Providers](https://github.com/Wwawawa/iac-aspnet/tree/master/6-WS-Federation/Federating%20with%20multiple%20Identity%20Providers)
+* 5-[EmbeddedSTS](https://github.com/Wwawawa/iac-aspnet/tree/master/6-WS-Federation/EmbeddedSTS)
+* 6-[Several Tokens Authenticaiton Demo](https://github.com/Wwawawa/Thinktecture.IdentityModel/tree/master/source/EmbeddedSts/Tokens)
+
 ### Reference [IdentityServer2 Document](https://github.com/IdentityServer/IdentityServer2/wiki)
 #### 1- External authentication is a separate authenticaition logic which can reuse for muiltple application.
 #### 2- workflow
