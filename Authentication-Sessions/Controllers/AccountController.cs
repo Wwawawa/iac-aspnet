@@ -51,6 +51,9 @@ namespace WebApplication1.Controllers
                     //{
                     //    id.BootstrapContext = this.CreateBootStrapContext(claims);
                     //}
+		    //SessionAuthenticationModule sam = FederatedAuthentication.SessionAuthenticationModule;
+		    //sam.WriteSessionTokenToCookie(token);
+		    //return this.Redirect("~/");
                     #endregion
 
                     // need to config the ClaimsAuthenticationManager in the web.config, can call our customer ClaimsAuthenticationManager that is Web.Security.ClaimsTransformer method.
@@ -86,10 +89,16 @@ namespace WebApplication1.Controllers
         }
         
         public BootstrapContext CreateBootStrapContext(IEnumerable<Claim> claims)
-		{
-			ClaimsIdentity id = new ClaimsIdentity(claims);
-			SamlSecurityToken bootStrapToken = TokenHelper.CreateSamlToken(id, FederatedAuthentication.FederationConfiguration.WsFederationConfiguration.Realm);
-			return new BootstrapContext(bootStrapToken, FederatedAuthentication.FederationConfiguration.IdentityConfiguration.SecurityTokenHandlers[bootStrapToken.GetType()]);
-		}
+	{
+		ClaimsIdentity id = new ClaimsIdentity(claims);
+		SamlSecurityToken bootStrapToken = TokenHelper.CreateSamlToken(id, FederatedAuthentication.FederationConfiguration.WsFederationConfiguration.Realm);
+		return new BootstrapContext(bootStrapToken, FederatedAuthentication.FederationConfiguration.IdentityConfiguration.SecurityTokenHandlers[bootStrapToken.GetType()]);
+	}
+	public ActionResult SignOut()
+	{
+		SessionAuthenticationModule sam = FederatedAuthentication.SessionAuthenticationModule;
+		sam.SignOut();
+		return this.Redirect("~/");
+	}	
     }
 }
