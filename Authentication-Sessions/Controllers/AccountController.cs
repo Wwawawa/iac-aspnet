@@ -44,6 +44,14 @@ namespace WebApplication1.Controllers
                         new Claim(ClaimTypes.Name, model.UserName)
                     };
                     var principal=new ClaimsPrincipal(new ClaimsIdentity(claims, "Forms"));
+                    
+                    #region //this piece code may be another way to add claims
+                    //SessionSecurityToken token = new SessionSecurityToken(principal);
+                    //if (FederatedAuthentication.FederationConfiguration.IdentityConfiguration.SaveBootstrapContext)
+                    //{
+                    //    id.BootstrapContext = this.CreateBootStrapContext(claims);
+                    //}
+                    #endregion
 
                     // need to config the ClaimsAuthenticationManager in the web.config, can call our customer ClaimsAuthenticationManager that is Web.Security.ClaimsTransformer method.
                     var transformer =FederatedAuthentication.FederationConfiguration
@@ -76,5 +84,12 @@ namespace WebApplication1.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
+        
+        public BootstrapContext CreateBootStrapContext(IEnumerable<Claim> claims)
+		{
+			ClaimsIdentity id = new ClaimsIdentity(claims);
+			SamlSecurityToken bootStrapToken = TokenHelper.CreateSamlToken(id, FederatedAuthentication.FederationConfiguration.WsFederationConfiguration.Realm);
+			return new BootstrapContext(bootStrapToken, FederatedAuthentication.FederationConfiguration.IdentityConfiguration.SecurityTokenHandlers[bootStrapToken.GetType()]);
+		}
     }
 }
