@@ -1,4 +1,4 @@
-#### Base on that config and code, we can make some change as below:
+#### Base on that config and code, we can make some change as below, that we can get same result as change before
 * 1- add below config into web.config
   ```xml
   <system.identityModel>
