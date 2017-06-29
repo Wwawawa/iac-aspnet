@@ -19,3 +19,5 @@ this pipeline only show the step involved authentication, not all steps of aspne
 * [3-ClaimsTransformation](https://github.com/Wwawawa/iac-aspnet/tree/master/ClaimsTransformation)
 * [4-Authentication-Sessions](https://github.com/Wwawawa/iac-aspnet/tree/master/Authentication-Sessions)
 
+#### [Several Tokens Authenticaiton Demo(include password, jwt,saml)](https://github.com/Wwawawa/Thinktecture.IdentityModel/tree/master/source/EmbeddedSts/Tokens)
+
